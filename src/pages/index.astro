@@ -1,0 +1,66 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import Card from '../components/Card.astro';
+import '../styles/tailwind.css';
+---
+
+<Layout title="Synthlat">
+  <main>
+
+    <!-- About -->
+    <div class="flex flex-col md:flex-row items-center justify-between h-auto md:h-[340px] w-full p-5 md:p-20 bg-gray-200/10 rounded-lg mb-5">
+
+      <!-- Imagen circular -->
+      <div class="p-[20px] flex-shrink-0 w-[200px] h-[200px] md:w-[250px] md:h-[250px] overflow-hidden flex items-center justify-center">
+        <img src="/icon.jpeg" alt="Synthlat" class="w-full h-full object-cover rounded-full">
+      </div>
+
+      <!-- Contenido principal -->
+      <div class="flex flex-col items-center justify-center flex-1 p-5 md:p-0 text-center">
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">
+          <span class="text-gradient">Synthlat</span>
+        </h1>
+        <p class="mb-4">The best music bot, apply filters, get song lyrics and much more.</p>
+        <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-5 items-center">
+          <Button href="https://synth.lat/invite" title="Invite" />
+          <Button href="https://dashboard.synth.lat/" title="Dashboard" />
+        </div>
+      </div>
+
+    </div>
+
+<!-- Features -->
+<div class="space-y-10 md:space-y-10 flex flex-col items-center justify-between h-auto w-full p-5 md:p-20 bg-gray-200/10 rounded-lg">
+	<Card 
+		image="/lyrics.jpg" 
+		title="Lyrics" 
+		body="Discover a new musical dimension with synchronized lyrics. Get the music of your favorite songs and immerse yourself in each verse like never before. Let each word come to life as you groove to your favorite tracks!" 
+	/>
+	<Card 
+		image="/autoplay.png" 
+		title="Autoplay" 
+		body="Explore a universe of melodies, where every note reveals songs as captivating as the ones you already love. Let the music surprise you with every chord." 
+	/>
+</div>
+
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 1200px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 0;
+    margin-bottom: 1em;
+  }
+</style>
