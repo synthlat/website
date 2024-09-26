@@ -7,6 +7,19 @@ interface Props {
 const { href, title } = Astro.props;
 ---
 
-<li class="p-r-10 h-[32px] w-[120px] flex items-center justify-center bg-purple-400 rounded-lg">
-  <a href={href} class="text-white">{title}</a>
+<li class="p-r-10 h-[32px] w-[120px] flex items-center justify-center rounded-lg">
+  <a href={href} class="text-white bg-purple">{title}</a>
 </li>
+
+<style>
+  .bg-purple {
+    background-color: #643bf7;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+
+  .bg-purple:hover {
+    background-color: #5a33e5; /* O un color más oscuro para hover */
+  }
+</style>
